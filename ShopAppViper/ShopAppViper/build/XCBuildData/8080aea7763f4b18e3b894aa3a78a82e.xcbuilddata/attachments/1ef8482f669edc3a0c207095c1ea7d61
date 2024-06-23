@@ -1,0 +1,85 @@
+{
+  "" : {
+    "const-values" : "/Users/tcmx-mobile-vc/Desktop/FoundCo/ShopAppViper/ShopAppViper/build/ShopAppViper.build/Release-iphoneos/ShopAppViper.build/Objects-normal/arm64/ShopAppViper-master.swiftconstvalues",
+    "dependencies" : "/Users/tcmx-mobile-vc/Desktop/FoundCo/ShopAppViper/ShopAppViper/build/ShopAppViper.build/Release-iphoneos/ShopAppViper.build/Objects-normal/arm64/ShopAppViper-master.d",
+    "diagnostics" : "/Users/tcmx-mobile-vc/Desktop/FoundCo/ShopAppViper/ShopAppViper/build/ShopAppViper.build/Release-iphoneos/ShopAppViper.build/Objects-normal/arm64/ShopAppViper-master.dia",
+    "emit-module-dependencies" : "/Users/tcmx-mobile-vc/Desktop/FoundCo/ShopAppViper/ShopAppViper/build/ShopAppViper.build/Release-iphoneos/ShopAppViper.build/Objects-normal/arm64/ShopAppViper-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/tcmx-mobile-vc/Desktop/FoundCo/ShopAppViper/ShopAppViper/build/ShopAppViper.build/Release-iphoneos/ShopAppViper.build/Objects-normal/arm64/ShopAppViper-master-emit-module.dia",
+    "swift-dependencies" : "/Users/tcmx-mobile-vc/Desktop/FoundCo/ShopAppViper/ShopAppViper/build/ShopAppViper.build/Release-iphoneos/ShopAppViper.build/Objects-normal/arm64/ShopAppViper-master.swiftdeps"
+  },
+  "/Users/tcmx-mobile-vc/Desktop/FoundCo/ShopAppViper/ShopAppViper/build/ShopAppViper.build/Release-iphoneos/ShopAppViper.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "index-unit-output-path" : "/ShopAppViper.build/Release-iphoneos/ShopAppViper.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/tcmx-mobile-vc/Desktop/FoundCo/ShopAppViper/ShopAppViper/build/ShopAppViper.build/Release-iphoneos/ShopAppViper.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/tcmx-mobile-vc/Desktop/FoundCo/ShopAppViper/ShopAppViper/build/ShopAppViper.build/Release-iphoneos/ShopAppViper.build/Objects-normal/arm64/GeneratedAssetSymbols.o"
+  },
+  "/Users/tcmx-mobile-vc/Desktop/FoundCo/ShopAppViper/ShopAppViper/ShopAppViper/AppDelegate.swift" : {
+    "index-unit-output-path" : "/ShopAppViper.build/Release-iphoneos/ShopAppViper.build/Objects-normal/arm64/AppDelegate.o",
+    "llvm-bc" : "/Users/tcmx-mobile-vc/Desktop/FoundCo/ShopAppViper/ShopAppViper/build/ShopAppViper.build/Release-iphoneos/ShopAppViper.build/Objects-normal/arm64/AppDelegate.bc",
+    "object" : "/Users/tcmx-mobile-vc/Desktop/FoundCo/ShopAppViper/ShopAppViper/build/ShopAppViper.build/Release-iphoneos/ShopAppViper.build/Objects-normal/arm64/AppDelegate.o"
+  },
+  "/Users/tcmx-mobile-vc/Desktop/FoundCo/ShopAppViper/ShopAppViper/ShopAppViper/Cells/ProductCollectionViewCell.swift" : {
+    "index-unit-output-path" : "/ShopAppViper.build/Release-iphoneos/ShopAppViper.build/Objects-normal/arm64/ProductCollectionViewCell.o",
+    "llvm-bc" : "/Users/tcmx-mobile-vc/Desktop/FoundCo/ShopAppViper/ShopAppViper/build/ShopAppViper.build/Release-iphoneos/ShopAppViper.build/Objects-normal/arm64/ProductCollectionViewCell.bc",
+    "object" : "/Users/tcmx-mobile-vc/Desktop/FoundCo/ShopAppViper/ShopAppViper/build/ShopAppViper.build/Release-iphoneos/ShopAppViper.build/Objects-normal/arm64/ProductCollectionViewCell.o"
+  },
+  "/Users/tcmx-mobile-vc/Desktop/FoundCo/ShopAppViper/ShopAppViper/ShopAppViper/Entities/ProductDetailModel.swift" : {
+    "index-unit-output-path" : "/ShopAppViper.build/Release-iphoneos/ShopAppViper.build/Objects-normal/arm64/ProductDetailModel.o",
+    "llvm-bc" : "/Users/tcmx-mobile-vc/Desktop/FoundCo/ShopAppViper/ShopAppViper/build/ShopAppViper.build/Release-iphoneos/ShopAppViper.build/Objects-normal/arm64/ProductDetailModel.bc",
+    "object" : "/Users/tcmx-mobile-vc/Desktop/FoundCo/ShopAppViper/ShopAppViper/build/ShopAppViper.build/Release-iphoneos/ShopAppViper.build/Objects-normal/arm64/ProductDetailModel.o"
+  },
+  "/Users/tcmx-mobile-vc/Desktop/FoundCo/ShopAppViper/ShopAppViper/ShopAppViper/Entities/ProductListModel.swift" : {
+    "index-unit-output-path" : "/ShopAppViper.build/Release-iphoneos/ShopAppViper.build/Objects-normal/arm64/ProductListModel.o",
+    "llvm-bc" : "/Users/tcmx-mobile-vc/Desktop/FoundCo/ShopAppViper/ShopAppViper/build/ShopAppViper.build/Release-iphoneos/ShopAppViper.build/Objects-normal/arm64/ProductListModel.bc",
+    "object" : "/Users/tcmx-mobile-vc/Desktop/FoundCo/ShopAppViper/ShopAppViper/build/ShopAppViper.build/Release-iphoneos/ShopAppViper.build/Objects-normal/arm64/ProductListModel.o"
+  },
+  "/Users/tcmx-mobile-vc/Desktop/FoundCo/ShopAppViper/ShopAppViper/ShopAppViper/Extensions/UIViewExtension.swift" : {
+    "index-unit-output-path" : "/ShopAppViper.build/Release-iphoneos/ShopAppViper.build/Objects-normal/arm64/UIViewExtension.o",
+    "llvm-bc" : "/Users/tcmx-mobile-vc/Desktop/FoundCo/ShopAppViper/ShopAppViper/build/ShopAppViper.build/Release-iphoneos/ShopAppViper.build/Objects-normal/arm64/UIViewExtension.bc",
+    "object" : "/Users/tcmx-mobile-vc/Desktop/FoundCo/ShopAppViper/ShopAppViper/build/ShopAppViper.build/Release-iphoneos/ShopAppViper.build/Objects-normal/arm64/UIViewExtension.o"
+  },
+  "/Users/tcmx-mobile-vc/Desktop/FoundCo/ShopAppViper/ShopAppViper/ShopAppViper/Interactors/ProductDetailInteractor.swift" : {
+    "index-unit-output-path" : "/ShopAppViper.build/Release-iphoneos/ShopAppViper.build/Objects-normal/arm64/ProductDetailInteractor.o",
+    "llvm-bc" : "/Users/tcmx-mobile-vc/Desktop/FoundCo/ShopAppViper/ShopAppViper/build/ShopAppViper.build/Release-iphoneos/ShopAppViper.build/Objects-normal/arm64/ProductDetailInteractor.bc",
+    "object" : "/Users/tcmx-mobile-vc/Desktop/FoundCo/ShopAppViper/ShopAppViper/build/ShopAppViper.build/Release-iphoneos/ShopAppViper.build/Objects-normal/arm64/ProductDetailInteractor.o"
+  },
+  "/Users/tcmx-mobile-vc/Desktop/FoundCo/ShopAppViper/ShopAppViper/ShopAppViper/Interactors/ProductListInteractor.swift" : {
+    "index-unit-output-path" : "/ShopAppViper.build/Release-iphoneos/ShopAppViper.build/Objects-normal/arm64/ProductListInteractor.o",
+    "llvm-bc" : "/Users/tcmx-mobile-vc/Desktop/FoundCo/ShopAppViper/ShopAppViper/build/ShopAppViper.build/Release-iphoneos/ShopAppViper.build/Objects-normal/arm64/ProductListInteractor.bc",
+    "object" : "/Users/tcmx-mobile-vc/Desktop/FoundCo/ShopAppViper/ShopAppViper/build/ShopAppViper.build/Release-iphoneos/ShopAppViper.build/Objects-normal/arm64/ProductListInteractor.o"
+  },
+  "/Users/tcmx-mobile-vc/Desktop/FoundCo/ShopAppViper/ShopAppViper/ShopAppViper/Presenters/ProductDetailPresenter.swift" : {
+    "index-unit-output-path" : "/ShopAppViper.build/Release-iphoneos/ShopAppViper.build/Objects-normal/arm64/ProductDetailPresenter.o",
+    "llvm-bc" : "/Users/tcmx-mobile-vc/Desktop/FoundCo/ShopAppViper/ShopAppViper/build/ShopAppViper.build/Release-iphoneos/ShopAppViper.build/Objects-normal/arm64/ProductDetailPresenter.bc",
+    "object" : "/Users/tcmx-mobile-vc/Desktop/FoundCo/ShopAppViper/ShopAppViper/build/ShopAppViper.build/Release-iphoneos/ShopAppViper.build/Objects-normal/arm64/ProductDetailPresenter.o"
+  },
+  "/Users/tcmx-mobile-vc/Desktop/FoundCo/ShopAppViper/ShopAppViper/ShopAppViper/Presenters/ProductListPresenter.swift" : {
+    "index-unit-output-path" : "/ShopAppViper.build/Release-iphoneos/ShopAppViper.build/Objects-normal/arm64/ProductListPresenter.o",
+    "llvm-bc" : "/Users/tcmx-mobile-vc/Desktop/FoundCo/ShopAppViper/ShopAppViper/build/ShopAppViper.build/Release-iphoneos/ShopAppViper.build/Objects-normal/arm64/ProductListPresenter.bc",
+    "object" : "/Users/tcmx-mobile-vc/Desktop/FoundCo/ShopAppViper/ShopAppViper/build/ShopAppViper.build/Release-iphoneos/ShopAppViper.build/Objects-normal/arm64/ProductListPresenter.o"
+  },
+  "/Users/tcmx-mobile-vc/Desktop/FoundCo/ShopAppViper/ShopAppViper/ShopAppViper/Routers/ProductDetailRouter.swift" : {
+    "index-unit-output-path" : "/ShopAppViper.build/Release-iphoneos/ShopAppViper.build/Objects-normal/arm64/ProductDetailRouter.o",
+    "llvm-bc" : "/Users/tcmx-mobile-vc/Desktop/FoundCo/ShopAppViper/ShopAppViper/build/ShopAppViper.build/Release-iphoneos/ShopAppViper.build/Objects-normal/arm64/ProductDetailRouter.bc",
+    "object" : "/Users/tcmx-mobile-vc/Desktop/FoundCo/ShopAppViper/ShopAppViper/build/ShopAppViper.build/Release-iphoneos/ShopAppViper.build/Objects-normal/arm64/ProductDetailRouter.o"
+  },
+  "/Users/tcmx-mobile-vc/Desktop/FoundCo/ShopAppViper/ShopAppViper/ShopAppViper/Routers/ProductListRouter.swift" : {
+    "index-unit-output-path" : "/ShopAppViper.build/Release-iphoneos/ShopAppViper.build/Objects-normal/arm64/ProductListRouter.o",
+    "llvm-bc" : "/Users/tcmx-mobile-vc/Desktop/FoundCo/ShopAppViper/ShopAppViper/build/ShopAppViper.build/Release-iphoneos/ShopAppViper.build/Objects-normal/arm64/ProductListRouter.bc",
+    "object" : "/Users/tcmx-mobile-vc/Desktop/FoundCo/ShopAppViper/ShopAppViper/build/ShopAppViper.build/Release-iphoneos/ShopAppViper.build/Objects-normal/arm64/ProductListRouter.o"
+  },
+  "/Users/tcmx-mobile-vc/Desktop/FoundCo/ShopAppViper/ShopAppViper/ShopAppViper/SceneDelegate.swift" : {
+    "index-unit-output-path" : "/ShopAppViper.build/Release-iphoneos/ShopAppViper.build/Objects-normal/arm64/SceneDelegate.o",
+    "llvm-bc" : "/Users/tcmx-mobile-vc/Desktop/FoundCo/ShopAppViper/ShopAppViper/build/ShopAppViper.build/Release-iphoneos/ShopAppViper.build/Objects-normal/arm64/SceneDelegate.bc",
+    "object" : "/Users/tcmx-mobile-vc/Desktop/FoundCo/ShopAppViper/ShopAppViper/build/ShopAppViper.build/Release-iphoneos/ShopAppViper.build/Objects-normal/arm64/SceneDelegate.o"
+  },
+  "/Users/tcmx-mobile-vc/Desktop/FoundCo/ShopAppViper/ShopAppViper/ShopAppViper/Views/ProductDetailView.swift" : {
+    "index-unit-output-path" : "/ShopAppViper.build/Release-iphoneos/ShopAppViper.build/Objects-normal/arm64/ProductDetailView.o",
+    "llvm-bc" : "/Users/tcmx-mobile-vc/Desktop/FoundCo/ShopAppViper/ShopAppViper/build/ShopAppViper.build/Release-iphoneos/ShopAppViper.build/Objects-normal/arm64/ProductDetailView.bc",
+    "object" : "/Users/tcmx-mobile-vc/Desktop/FoundCo/ShopAppViper/ShopAppViper/build/ShopAppViper.build/Release-iphoneos/ShopAppViper.build/Objects-normal/arm64/ProductDetailView.o"
+  },
+  "/Users/tcmx-mobile-vc/Desktop/FoundCo/ShopAppViper/ShopAppViper/ShopAppViper/Views/ProductListView.swift" : {
+    "index-unit-output-path" : "/ShopAppViper.build/Release-iphoneos/ShopAppViper.build/Objects-normal/arm64/ProductListView.o",
+    "llvm-bc" : "/Users/tcmx-mobile-vc/Desktop/FoundCo/ShopAppViper/ShopAppViper/build/ShopAppViper.build/Release-iphoneos/ShopAppViper.build/Objects-normal/arm64/ProductListView.bc",
+    "object" : "/Users/tcmx-mobile-vc/Desktop/FoundCo/ShopAppViper/ShopAppViper/build/ShopAppViper.build/Release-iphoneos/ShopAppViper.build/Objects-normal/arm64/ProductListView.o"
+  }
+}
