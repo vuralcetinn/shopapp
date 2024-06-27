@@ -14,45 +14,21 @@ protocol ProductInteractorInputProtocol: AnyObject {
 protocol ProductInteractorOutputProtocol: AnyObject {
     func didFetchProducts(_ productList: ProductListModel)
     func didFailToFetchProducts(error: Error)
-    func didFetchSponsoredProducts(_ productList: ProductListModel)
-
 }
+
 
 class ProductInteractor: ProductInteractorInputProtocol {
     weak var presenter: ProductInteractorOutputProtocol?
+    var productServiceHelper = ProductServiceHelper()
 
     func fetchProducts(paging: Int) {
-        
-        if paging < 3 {
-            let urlString = "https://private-d3ae2-n11case.apiary-mock.com/listing/\(paging)"
-
-            guard let url = URL(string: urlString) else {
-                print("Invalid URL")
-                return
+        productServiceHelper.fetchProducts(paging: paging) { result in
+            switch result {
+            case .success(let productListModel):
+                self.presenter?.didFetchProducts(productListModel)
+            case .failure(let error):
+                self.presenter?.didFailToFetchProducts(error: error)
             }
-
-            let task = URLSession.shared.dataTask(with: url) { data, response, error in
-                if let error = error {
-                    self.presenter?.didFailToFetchProducts(error: error)
-                    return
-                }
-
-                guard let data = data else {
-                    print("No data")
-                    return
-                }
-
-                do {
-                    let productListModel = try JSONDecoder().decode(ProductListModel.self, from: data)
-                    self.presenter?.didFetchProducts(productListModel)
-                    self.presenter?.didFetchSponsoredProducts(productListModel)
-                } catch {
-                    self.presenter?.didFailToFetchProducts(error: error)
-                }
-            }
-
-            task.resume()
         }
-        
     }
 }

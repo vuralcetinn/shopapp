@@ -12,43 +12,17 @@ protocol ProductDetailInteractorOutputProtocol: AnyObject {
 class ProductDetailInteractor: ProductDetailInteractorInputProtocol {
     weak var presenter: ProductDetailInteractorOutputProtocol?
     let urlString = "http://private-d3ae2-n11case.apiary-mock.com/product?productId="
+    var productServiceHelper = ProductServiceHelper()
 
     func fetchProductDetail(by id: Int) {
-        let fullUrlString = "\(urlString)/\(id)"
-        guard let url = URL(string: fullUrlString) else {
-            print("Invalid URL")
-            return
-        }
-        print(url)
-
-        let task = URLSession.shared.dataTask(with: url) { data, response, error in
-            if let error = error {
-                DispatchQueue.main.async {
-                    print(fullUrlString)
-                    self.presenter?.didFailToFetchProductDetail(error: error)
-                }
-                return
-            }
-
-            guard let data = data else {
-                DispatchQueue.main.async {
-                    print("No data")
-                }
-                return
-            }
-
-            do {
-                let productDetail = try JSONDecoder().decode(ProductDetail.self, from: data)
-                DispatchQueue.main.async {
-                    self.presenter?.didFetchProductDetail(productDetail)
-                }
-            } catch {
-                DispatchQueue.main.async {
-                    self.presenter?.didFailToFetchProductDetail(error: error)
-                }
+        productServiceHelper.fetchProductDetail(by: id) { result in
+            switch result {
+            case .success(let productDetail):
+                self.presenter?.didFetchProductDetail(productDetail)
+            case .failure(let error):
+                self.presenter?.didFailToFetchProductDetail(error: error)
             }
         }
-
-        task.resume()
     }
 }
+

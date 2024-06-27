@@ -1,16 +1,38 @@
 protocol ProductPresenterProtocol: AnyObject {
-    func viewDidLoad(paging: Int)
     func didSelectProduct(_ productId: Int)
     func fetchPaging(paging: Int)
+    func getProductsCount() -> Int
+    func getSponsoredProductsCount() -> Int
+    func getProductByIndex(index: Int) -> Product
+    func getSponsoredProductByIndex(index: Int) -> Product
 }
 
 class ProductPresenter: ProductPresenterProtocol {
+    
+    
+    
+    
     weak var view: ProductViewProtocol?
     var interactor: ProductInteractorInputProtocol?
     var router: ProductRouterProtocol?
-
-    func viewDidLoad(paging: Int) {
-        interactor?.fetchProducts(paging: paging)
+    
+    var products: [Product] = []
+    var sponsoredProducts: [Product] = []
+    
+    func getProductsCount() -> Int {
+        return products.count
+    }
+    
+    func getSponsoredProductsCount() -> Int {
+        return sponsoredProducts.count
+    }
+    
+    func getProductByIndex(index: Int) -> Product {
+        return products[index]
+    }
+    
+    func getSponsoredProductByIndex(index: Int) -> Product {
+        return sponsoredProducts[index]
     }
     
     func fetchPaging(paging: Int) {
@@ -24,12 +46,11 @@ class ProductPresenter: ProductPresenterProtocol {
 
 extension ProductPresenter: ProductInteractorOutputProtocol {
     func didFetchProducts(_ productList: ProductListModel) {
-        view?.showProducts(productList.products ?? [])
+        self.products.append(contentsOf: productList.products ?? []) 
+        self.sponsoredProducts.append(contentsOf: productList.sponsoredProducts ?? [])
+        view?.reloadDatas()
     }
 
-    func didFetchSponsoredProducts(_ productList: ProductListModel) {
-        view?.showSponsoredProducts(productList.sponsoredProducts ?? [])
-    }
     func didFailToFetchProducts(error: Error) {
         view?.showError(error.localizedDescription)
     }

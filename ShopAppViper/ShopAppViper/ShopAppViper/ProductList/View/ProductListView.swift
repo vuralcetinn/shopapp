@@ -8,16 +8,13 @@
 import UIKit
 
 protocol ProductViewProtocol: AnyObject {
-    func showProducts(_ products: [Product])
     func showError(_ message: String)
-    func showSponsoredProducts(_ products: [Product])
+    func reloadDatas()
 }
 
 class ProductViewController: UIViewController {
     var presenter: ProductPresenterProtocol?
-    var products: [Product] = []
-    var sponsoredProducts: [Product] = []
-    var paging = 1
+    var paging = 0
 
     private let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
@@ -79,7 +76,6 @@ class ProductViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         setupUI()
-        presenter?.viewDidLoad(paging:paging)
     }
 
     private func setupUI() {
@@ -112,42 +108,32 @@ class ProductViewController: UIViewController {
 }
 
 extension ProductViewController: ProductViewProtocol {
-    func showProducts(_ products: [Product]) {
-        for product in products {
-            self.products.append(product)
-        }
-        DispatchQueue.main.async {
-            self.collectionView.reloadData()
-            print(self.products.count)
-            self.contentView.setHeight(height: CGFloat(((self.products.count / 2) * 340 + 400)))
-            self.view.layoutIfNeeded()
-            self.contentView.layoutIfNeeded()
+    
+    func reloadDatas() {
+        DispatchQueue.main.asyncAfter(deadline: .now()){ [self] in
+            pageControl.numberOfPages = (presenter?.getSponsoredProductsCount())!
+            horizontalCollectionView.reloadData()
+            collectionView.reloadData()
             self.scrollView.delegate = self
         }
     }
-
+    
+    
     func showError(_ message: String) {
         let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
     }
-    
-    func showSponsoredProducts(_ products: [Product]) {
-        self.sponsoredProducts = products
-        DispatchQueue.main.async {
-            self.pageControl.numberOfPages = products.count
-            self.horizontalCollectionView.reloadData()
-        }
-    }
+
 }
 
 extension ProductViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == self.collectionView {
-            return products.count
+            return (presenter?.getProductsCount())!
         } else if collectionView == self.horizontalCollectionView {
-            return sponsoredProducts.count
+            return (presenter?.getSponsoredProductsCount())!
         }
         return 0
     }
@@ -156,13 +142,13 @@ extension ProductViewController: UICollectionViewDataSource, UICollectionViewDel
         
         if collectionView == self.collectionView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductCell", for: indexPath) as! ProductCollectionViewCell
-            let product = products[indexPath.item]
-            cell.configure(with: product)
+            let product = presenter?.getProductByIndex(index: indexPath.item)
+            cell.configure(with: product!)
             return cell
         } else if collectionView == self.horizontalCollectionView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SponsoredProductCell", for: indexPath) as! SponsoredProductCollectionViewCell
-            let product = sponsoredProducts[indexPath.item]
-            cell.configure(with: product)
+            let product = presenter?.getSponsoredProductByIndex(index: indexPath.item)
+            cell.configure(with: product!)
             return cell
         }
         return UICollectionViewCell()
@@ -170,14 +156,14 @@ extension ProductViewController: UICollectionViewDataSource, UICollectionViewDel
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == self.collectionView {
-            let selectedProduct = products[indexPath.item]
-            if let productId = selectedProduct.id {
+            let selectedProduct = presenter?.getProductByIndex(index: indexPath.item)
+            if let productId = selectedProduct?.id! {
                 print(productId)
                 presenter?.didSelectProduct(productId)
             }
         } else if collectionView == self.horizontalCollectionView {
-            let selectedSponsoredProduct = sponsoredProducts[indexPath.item]
-            if let productId = selectedSponsoredProduct.id {
+            let selectedSponsoredProduct = presenter?.getSponsoredProductByIndex(index: indexPath.item)
+            if let productId = selectedSponsoredProduct?.id {
                 presenter?.didSelectProduct(productId)
             }
         }
@@ -191,11 +177,9 @@ extension ProductViewController: UICollectionViewDataSource, UICollectionViewDel
         }else if scrollView == self.collectionView {
             let bottomEdge = scrollView.contentOffset.y + scrollView.frame.size.height
             if bottomEdge >= scrollView.contentSize.height {
-                if paging < 3 {
+                if paging <= 1 {
                     paging = paging + 1
                     self.presenter?.fetchPaging(paging: paging)
-                    print(paging)
-                    print("test")
                 }
             }
         }
