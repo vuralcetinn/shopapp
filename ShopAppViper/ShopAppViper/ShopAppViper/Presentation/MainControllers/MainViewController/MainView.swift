@@ -17,6 +17,13 @@ class MainView: UIView {
         return view
     }()
     
+    lazy var toolbarView: ToolbarView = {
+       let view = ToolbarView()
+        view.toolbarTitle = "Wireframexx"
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
     lazy var firstButtonView: UIButton = {
         let button = UIButton()
         button.setTitle("Test", for: .normal)
@@ -46,12 +53,20 @@ class MainView: UIView {
         mainContentView.setRight(equalTo: rightAnchor)
         mainContentView.setLeft(equalTo: leftAnchor)
         
+        setupToolbarView()
         setUpButtonView()
+    }
+    
+    private func setupToolbarView() {
+        mainContentView.addSubview(toolbarView)
+        toolbarView.setTop(equalTo: topAnchor,constant: 60)
+        toolbarView.setLeft(equalTo: leftAnchor)
+        toolbarView.setRight(equalTo: rightAnchor)
     }
     
     private func setUpButtonView() {
         mainContentView.addSubview(firstButtonView)
-        firstButtonView.setTop(equalTo: mainContentView.topAnchor,constant: 120)
+        firstButtonView.setTop(equalTo: toolbarView.topAnchor,constant: 120)
         firstButtonView.setLeft(equalTo: mainContentView.leftAnchor,constant: 20)
         firstButtonView.setRight(equalTo: mainContentView.rightAnchor,constant: -20)
         firstButtonView.setHeight(height: 40)

@@ -12,6 +12,7 @@
 		2935EEB52C472D8000013576 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2935EEB42C472D8000013576 /* MainViewController.swift */; };
 		2935EEB82C472E3800013576 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2935EEB72C472E3800013576 /* SplashViewController.swift */; };
 		2935EEBA2C472E4900013576 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2935EEB92C472E4900013576 /* SplashView.swift */; };
+		297E487F2C5142AA0090449E /* ToolbarViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297E487E2C5142AA0090449E /* ToolbarViewExt.swift */; };
 		29816D192C1EFAB0004CB392 /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29816D182C1EFAB0004CB392 /* ProductCollectionViewCell.swift */; };
 		29816D1C2C1EFC61004CB392 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29816D1B2C1EFC61004CB392 /* UIViewExtension.swift */; };
 		29816D1E2C21952E004CB392 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29816D1D2C21952E004CB392 /* StringExt.swift */; };
@@ -42,6 +43,7 @@
 		2935EEB42C472D8000013576 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		2935EEB72C472E3800013576 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		2935EEB92C472E4900013576 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		297E487E2C5142AA0090449E /* ToolbarViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarViewExt.swift; sourceTree = "<group>"; };
 		29816D182C1EFAB0004CB392 /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		29816D1B2C1EFC61004CB392 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		29816D1D2C21952E004CB392 /* StringExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				291C60AE2C2DC70500835B14 /* ServiceHelper.swift */,
 				291C60B02C2DC7EB00835B14 /* ConfigFile.swift */,
 				29BA13F42C486AAB00A8C1FB /* Router.swift */,
+				297E487E2C5142AA0090449E /* ToolbarViewExt.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -318,9 +321,25 @@
 		29BA13F92C48712500A8C1FB /* SubControllers */ = {
 			isa = PBXGroup;
 			children = (
-				2935EEB12C472CCF00013576 /* VIPER */,
+				29C71F912C4E7E1D00360C1A /* ShopApp */,
 			);
 			path = SubControllers;
+			sourceTree = "<group>";
+		};
+		29C71F912C4E7E1D00360C1A /* ShopApp */ = {
+			isa = PBXGroup;
+			children = (
+				29C71F922C4E7E2A00360C1A /* MVVM */,
+				2935EEB12C472CCF00013576 /* VIPER */,
+			);
+			path = ShopApp;
+			sourceTree = "<group>";
+		};
+		29C71F922C4E7E2A00360C1A /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MVVM;
 			sourceTree = "<group>";
 		};
 		C3DDFABF562A398AF8956696 /* Pods */ = {
@@ -464,6 +483,7 @@
 				2993DB9E2C1DBB630038A34F /* ProductDetailInteractor.swift in Sources */,
 				29BA13F52C486AAB00A8C1FB /* Router.swift in Sources */,
 				2993DBA02C1DBB720038A34F /* ProductDetailModel.swift in Sources */,
+				297E487F2C5142AA0090449E /* ToolbarViewExt.swift in Sources */,
 				29AB60D32C270FC300E2F537 /* ProductDetailCell.swift in Sources */,
 				2993DB772C1CB32D0038A34F /* SceneDelegate.swift in Sources */,
 				2993DB922C1CBB2A0038A34F /* ProductListPresenter.swift in Sources */,
